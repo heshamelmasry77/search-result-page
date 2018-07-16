@@ -3,6 +3,7 @@ import { Component } from "react";
 // eslint-disable-next-line
 import "./styles/SearchResults.css";
 import * as api from "../../utils/api";
+import CardPreview from "../CardPreview";
 
 class SearchResults extends Component {
 
@@ -17,9 +18,9 @@ class SearchResults extends Component {
     api
       .fetchSearchResultsList()
       .then(searchResults => {
-        this.setState(
-          searchResults
-        );
+        this.setState({
+          searchResults: searchResults
+        });
         console.log(this.state);
       })
       .catch(err => {
@@ -31,6 +32,7 @@ class SearchResults extends Component {
     //after react get mounted
     // when the data is accessible
   }
+
   componentDidMount() {
     console.log(this.state);
   }
@@ -38,7 +40,7 @@ class SearchResults extends Component {
   render() {
     return (
       <div className="SearchResults">
-        <h1>test</h1>
+        {this.state.searchResults.map((result, i) => <CardPreview key={i} {...result} />)}
       </div>
     );
   }
