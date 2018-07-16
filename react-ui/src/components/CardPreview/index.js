@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types'; // ES6
-// import {Link} from 'react-router-dom';
 import "./styles/CardPreview.css";
 
 class CardPreview extends Component {
