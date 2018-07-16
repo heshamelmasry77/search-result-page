@@ -8,7 +8,6 @@ class CardPreview extends Component {
   render() {
     let destinations = this.props.destinations.map((destination, i) => {
       return (
-
           <li key={i}>
             {destination}/
           </li>
