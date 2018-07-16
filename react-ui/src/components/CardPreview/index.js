@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types'; // ES6
 // import {Link} from 'react-router-dom';
 import "./styles/CardPreview.css";
 
@@ -41,5 +41,17 @@ class CardPreview extends Component {
   }
 }
 
+CardPreview.propTypes = {
+  price: PropTypes.number,
+  saving: PropTypes.number,
+  tour_operator: PropTypes.string,
+  country: PropTypes.string,
+  age_from: PropTypes.number,
+  age_to: PropTypes.number,
+  map_image:PropTypes.string,
+  tour_image:PropTypes.string,
+  tour_name:PropTypes.string,
+  destinations:PropTypes.array
+};
 
 export default CardPreview;
