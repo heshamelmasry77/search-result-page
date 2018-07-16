@@ -40,8 +40,7 @@ class SearchResults extends Component {
   render() {
     return (
       <div className="SearchResults">
-        <CardPreview/>
-        {/*{this.state.searchResults.map((result, i) => <CardPreview key={i} {...result} />)}*/}
+        {this.state.searchResults.map((result, i) => <CardPreview key={i} {...result} />)}
       </div>
     );
   }

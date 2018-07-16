@@ -5,32 +5,37 @@ import "./styles/CardPreview.css";
 
 class CardPreview extends Component {
 
-
   render() {
+    let destinations = this.props.destinations.map((destination, i) => {
+      return (
+
+          <li key={i}>
+            {destination}/
+          </li>
+      );
+    });
     return (
       <div className="CardPreview">
-        {/*<Link to={'/projects/' + this.props.name}>*/}
-        {/*<figure>*/}
-        {/*<img src={'data:image/png;' + this.props.picture.data.data}*/}
-        {/*alt={'photo of ' + this.props.name}/>*/}
-        {/*<figcaption>*/}
-        {/*<p>*/}
-        {/*{this.props.description}*/}
-        {/*<br/>*/}
-        {/*<span>-View-</span>*/}
-        {/*</p>*/}
-        {/*</figcaption>*/}
-        {/*</figure>*/}
-        {/*</Link>*/}
-
-        {/*<div className="tour-image"><img src={this.props.tour_image}/> </div>*/}
-
-        {/*<div className="container">*/}
-          <div className="item-a"></div>
-          <div className="item-b"></div>
-          <div className="item-c"></div>
-          <div className="item-d"></div>
-        {/*</div>*/}
+        <div className="item-a"><img src={this.props.tour_image} alt={this.props.tour_name}/></div>
+        <div className="item-b"><img src={this.props.map_image} alt={this.props.tour_name}/></div>
+        <div className="item-c">
+          <h3>{this.props.description}</h3>
+          <div>
+            <span>destinations</span>
+            <ul>{destinations}</ul>
+          </div>
+          <div><span>starts/ ends in </span> <span>{this.props.country}</span></div>
+          <div><span>age range </span><span>{this.props.age_from} to {this.props.age_to} year old</span></div>
+          <div><span>country </span> <span>{this.props.country}</span></div>
+          <div><span>operator </span> <span>{this.props.tour_operator}</span></div>
+        </div>
+        <div className="item-d">
+          <div className="our-savings">our saving</div>
+          <div className="from-price">from</div>
+          <div className="savings">€ {this.props.saving}</div>
+          <div className="price">€ {this.props.price}</div>
+          <div className="days-number">{this.props.length} <span>days</span></div>
+        </div>
 
       </div>
     );

@@ -1,23 +1,86 @@
 .CardPreview {
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: auto;
-  grid-template-areas: "tourImage tourDetails tourPrices" "map tourDetails tourPrices"; }
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 58% 40% auto;
+  grid-template-areas: "tourImage tourDetails tourPrices" "map tourDetails tourPrices";
+  background-color: white;
+  margin: 0 0 10px 0; }
+  .CardPreview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%; }
 
 .item-a {
   grid-area: tourImage;
-  background-color: red; }
+  margin-bottom: 2%; }
 
 .item-b {
-  grid-area: map;
-  background-color: aqua; }
+  grid-area: map; }
 
 .item-c {
+  padding: 20px;
   grid-area: tourDetails;
-  background-color: green; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .item-c h3 {
+    margin: 0 0 10px 0; }
+  .item-c div {
+    display: flex;
+    font-size: 14px; }
+    .item-c div span:nth-child(1) {
+      color: #9ea5b4;
+      text-transform: uppercase;
+      flex: 1; }
+    .item-c div span:nth-child(2) {
+      flex: 1;
+      color: black; }
+    .item-c div ul {
+      flex: 1;
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap; }
+      .item-c div ul li {
+        color: black; }
 
 .item-d {
+  padding: 20px;
   grid-area: tourPrices;
-  background-color: firebrick; }
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25px 25px 50px;
+  grid-template-areas: "ourSavings fromPrice " "savings price" "daysNumber daysNumber";
+  justify-items: start;
+  align-items: center; }
+  .item-d .price {
+    grid-area: price;
+    justify-self: end;
+    font-weight: bold;
+    font-size: 18px; }
+  .item-d .savings {
+    grid-area: savings;
+    font-weight: bold;
+    font-size: 18px; }
+  .item-d .our-savings {
+    grid-area: ourSavings;
+    text-transform: capitalize; }
+  .item-d .from-price {
+    grid-area: fromPrice;
+    justify-self: end;
+    text-transform: capitalize; }
+  .item-d .days-number {
+    grid-area: daysNumber;
+    justify-self: center;
+    font-size: 22px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0; }
+    .item-d .days-number span {
+      font-weight: bold; }
