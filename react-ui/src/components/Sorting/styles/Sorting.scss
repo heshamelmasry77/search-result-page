@@ -1,0 +1,22 @@
+$lighterDarkBlue: #212121;
+.Sorting-wrapper{
+  background-color: $lighterDarkBlue;
+  max-width: 100%;
+  position: relative;
+  z-index: 500;
+  width: 100%;
+  padding: 6px 70px;
+  margin: 0 auto;
+}
+.Sorting {
+  max-width: 1090px !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: $lighterDarkBlue;
+  font-style: normal;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  align-items: flex-end;
+}
