@@ -4,7 +4,7 @@ import "../../../stylesheets/Header.css";
 
 const Index = () => (
   <div className="Header">
-    <p>i am Header page</p>
+    <p>Search Results List View</p>
   </div>
 );
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types'; // ES6
+import LazyLoad from 'react-lazyload';
 import "./styles/CardPreview.css";
 
 class CardPreview extends Component {
@@ -14,8 +15,16 @@ class CardPreview extends Component {
     });
     return (
       <div className="CardPreview">
-        <div className="item-a"><img src={this.props.tour_image} alt={this.props.tour_name}/></div>
-        <div className="item-b"><img src={this.props.map_image} alt={this.props.tour_name}/></div>
+        <div className="item-a">
+          <LazyLoad height={169}>
+            <img src={this.props.tour_image} alt={this.props.tour_name}/>
+          </LazyLoad>
+        </div>
+        <div className="item-b">
+          <LazyLoad height={120}>
+          <img src={this.props.map_image} alt={this.props.tour_name}/>
+          </LazyLoad>
+        </div>
         <div className="item-c">
           <h3>{this.props.description}</h3>
           <div>
