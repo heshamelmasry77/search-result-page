@@ -1,0 +1,90 @@
+.DropDown {
+  .custom-dropdown {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(100% - 20px);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .dropdown-btn {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      span {
+        flex: 2;
+      }
+      svg {
+        align-self: flex-end;
+        color: #3e3e3e;
+        flex: 1;
+        font-size: 1.5em;
+      }
+    }
+    button {
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: black;
+      border-radius: 2px;
+      color: whitesmoke;
+      margin: 0 5px;
+      padding: 12px 30px;
+      text-decoration: none;
+      width: 120px;
+      border: none;
+    }
+    button:active {
+      outline: none;
+      border: none;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    .custom-dropdown-menu {
+      display: none;
+      list-style-type: none;
+    }
+    &.open {
+      .custom-dropdown-menu {
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        padding: 0;
+        margin: 0 5px;
+        li {
+          display: flex;
+          &:nth-child(1) {
+            a {
+              border-top-left-radius: 2px;
+              border-top-right-radius: 2px;
+            }
+          }
+          a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: black;
+            border-radius: 0;
+            color: whitesmoke;
+            margin: 0;
+            padding: 12px 30px;
+            text-decoration: none;
+            width: 120px;
+          }
+        }
+
+      }
+    }
+  }
+
+  .shadow {
+    -webkit-box-shadow: 2px 3px 5px 1px #272727; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 2px 3px 5px 1px #272727; /* Firefox 3.5 - 3.6 */
+    box-shadow: 2px 3px 5px 1px #272727; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  }
+}
