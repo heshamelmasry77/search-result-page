@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@types/react": "^16.0.25",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "flow-bin": "^0.57.3",
     "history": "^4.7.2",
     "install": "^0.10.1",
